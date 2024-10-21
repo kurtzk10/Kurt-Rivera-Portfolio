@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Phony</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        body {
+            height: 200vh;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(209, 91, 111);
+            overflow:hidden;
+        }
+
+        .hero {
+            width: 100%;
+            height: 50vh;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: -12.5%;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+        }
+
+
+        .hero .fade {
+            background: linear-gradient(
+                to top,
+                rgba(209, 91, 111,1) 0%,
+                rgba(209, 91, 111,0) 100%
+            );
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+            height: 60%;
+            z-index: 1;
+        }
+
+        .logo {
+            display:flex;
+            justify-content: center;
+        }
+
+        .logo img {
+            position: relative;
+            width: 20%;
+            height: 20%;
+            top: -100%;
+            z-index: 5;
+        }
+
+        .button {
+            width: 15%;
+            height: 6%;
+            margin: 0 auto;
+        }
+
+        button.start{
+            font-family: "Pacifico";
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            display: block;
+            font-size: 100%;
+            text-align: center;
+            background-color: #E62077;
+            color: white;
+            border: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        button.start:hover {
+            background-color: #61072e;
+            cursor: pointer;
+        }
+
+        .credits {
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 1px;
+            width: 100%;
+            text-align:end;
+            padding-right: 1%;
+            font-size: 75%;
+            font-family: 'Pacifico';
+            color: white;
+        }
+
+        #phonebook {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        #phonebook a:not(.not){
+            z-index: 2;
+            width: 3%;
+            height: 10%;
+            box-sizing: border-box;
+            margin-left: 1%;
+            color: white;
+            font-size: 500%;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .title {
+            color: white;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 1%;
+            box-sizing: border-box;
+            position: absolute;
+            font-size: 150%;
+            font-family: "Pacifico";
+        }
+
+        .main {
+            display:flex;
+            justify-content: center;
+            position: relative;
+            gap: 2.5%;
+            height: 80%;
+            top: 11%;
+            padding: 2.5% 0;
+        }
+
+        .left {
+            width: 25%;
+            height: 100%;
+            background-color: red;
+            position:relative;
+            overflow-y:auto;
+        }
+
+        .search {
+            box-sizing: border-box;
+            width: 100%;
+            position:sticky;
+            top: 0%;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 12px;
+            left: 8px;
+            z-index: 10;
+        }
+
+        #search {
+            box-sizing: border-box;
+            width: 100%;
+            padding-left: 30px;
+            position:sticky;
+            top: 0%;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 1px;
+            overflow-y: auto;
+        }
+
+        #nav li {
+            padding: 12px 0;
+            padding-left: 40px;
+            border: 1px solid black;
+            margin-top: -1px;
+
+        }
+
+        #add {
+            width: 100%;
+            padding: 12px;
+            position: sticky;
+            top: 39px;
+        }
+
+        .form {
+            box-sizing: border-box;
+            width: 50%;
+            background-color: whitesmoke;
+        }
+
+        .center {
+            justify-content:center;
+            display:flex;
+        }
+
+        .header {
+            display:flex;
+            justify-content: space-between;
+        }
+
+        input {
+            padding: 12px;
+            border: 0;
+        }
+
+        .form input {
+            box-sizing: border-box;
+            display: block;
+            margin-bottom: 2.5%;
+            margin-top: 1%;
+            padding: 10px;
+            width: 100%;
+            font-size: large;
+        }
+
+        label {
+            font-size: large;
+        }
+
+        .header div {
+            width: 47.5%;
+        }
+
+        #submit {
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid black;
+        }
+        
+        #submit:hover {
+            cursor: pointer;
+        }
+
+        #end {
+            position:absolute;
+            width: 1px;
+            height: 1px;
+            bottom: 0%;
+        }
+
+    </style>
+
+
+    <script>
+        let contacts = [];
+
+        function addContact() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let address = document.getElementById("address").value;
+
+            if (name == "") {
+                alert("Name required!")
+            } else if (email == "") {
+                alert("Email address required!")
+            } else if (phone == "") {
+                alert("Phone number required!")
+            } else if (address == "") {
+                alert("Address required!")
+            } else {
+                for (var contact of contacts) {
+                    if (contact.name === name) {
+                        alert("You already have a friend with the name " + name + " in here. Try again.");
+                        return;
+                    }
+                }
+
+                contacts.push({
+                    "name":name,
+                    "email":email,
+                    "phone":phone,
+                    "address":address
+                });
+
+                const li = document.createElement("li");
+                li.innerHTML = ('<a class="not">'+name+"</a>");
+                li.setAttribute("onclick", "selectContact(event)");
+                li.setAttribute("id", name.toLowerCase());
+
+                const ul = document.getElementById("nav");
+                ul.appendChild(li);
+
+                clearForm();
+            }
+        }
+
+        function clearForm() {
+            if (document.getElementById("placeholder")) {
+                const ul = document.getElementById("nav");
+                ul.removeChild(document.getElementById("placeholder"));
+            }
+
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let phone = document.getElementById("phone");
+            let address = document.getElementById("address");
+
+            name.value = "";
+            email.value = "";
+            phone.value = "";
+            address.value = "";
+
+            let submit = document.getElementById("submit")
+            submit.innerHTML = "Add";
+            submit.disabled = false;
+
+            name.disabled = false;
+            email.disabled = false;
+            phone.disabled = false;
+            address.disabled = false;
+
+            submit.setAttribute("onclick", "addContact()");
+            submit.setAttribute("style", 'cursor:pointer');
+        }
+
+        function selectContact(event) {
+            let selected = event.target.innerHTML;
+            for (var contact of contacts) {
+                if (contact["name"].toLowerCase() == selected.toLowerCase()) {
+                    
+                    let name = document.getElementById("name")
+                    let email = document.getElementById("email")
+                    let phone = document.getElementById("phone")
+                    let address = document.getElementById("address")
+
+                    name.value = contact.name;
+                    email.value = contact.email;
+                    phone.value = contact.phone;
+                    address.value = contact.address;
+
+                    name.disabled = true;
+                    email.disabled = true;
+                    phone.disabled = true;
+                    address.disabled = true;
+
+                    let submit = document.getElementById("submit");
+                    submit.disabled = true;
+                    submit.setAttribute("style", 'cursor:not-allowed');
+                }
+            }
+
+        }
+
+        function searchContact() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("nav");
+            el = ul.getElementsByTagName("li");
+            for (i = 0; i < el.length; i++) {
+                a = el[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    el[i].style.display = "";
+                } else {
+                    el[i].style.display = "none";
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="hero" id="hero">
+            <img src="https://images2.alphacoders.com/210/210202.png">
+            <div class="fade"></div>
+        </div>
+        <div class="logo"><img src="https://i.imgur.com/FhEIEhi.png"></div>
+        <div class="button">
+            <a href="#end"><button class="start">Start!</button></a>
+        </div>
+        <div class="credits"><h1>Made by: Kurt Francis A. Rivera</h1></div>
+    </header>
+    <section id="phonebook">
+        <a href="#hero">×</a>
+        <div class="title"><h1>My Little Phonebook</h1></div>
+        <div class="main">
+            <div class="left">
+                <div class="search">
+                    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+                    <input type="text" id="search" onkeyup="searchContact()" placeholder="Search a pony">
+                </div>
+                <button id="add" onclick="clearForm()">Add a friend</button>
+                <ul id="nav">
+                </ul>
+            </div>
+            <div class="form">
+                <div class="center">
+                    <h1 style="font-size:200%">Details</h1>
+                </div>
+
+                <label for="name">Friend's name</label>
+                <input type="text" id="name" required>
+                <div class="header">
+                    <div class="div">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div>
+                        <label for="phone">Phone number</label>
+                        <input type="text" id="phone" required>
+                    </div>
+                </div>
+                <label for="address">Full Address</label>
+                <input type="textarea" id="address" required>
+
+                <div class="center">
+                    <button id="submit" onclick="addContact()">Add</button>
+                </div>
+            </div>
+        </div>
+        <div id="end"></div>
+    </section>
+</body>
+</html>

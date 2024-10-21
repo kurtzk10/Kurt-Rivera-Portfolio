@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KurtK0dez, your IT solution friends</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <style>
+        blockquote {
+            font-family: "Montserrat";
+            position: relative;
+            margin: 0.5em;
+            padding: 0.5em 2em 0.5em 3em;
+        }
+        blockquote:before {
+            font-family: Georgia, serif;
+            color:red;
+            position: absolute;
+            font-size: 3em;
+            line-height: 1;
+            top: 0;
+            left: 0;
+            content: "\201C";
+        }
+        blockquote:after {
+            font-family: Georgia, serif;
+            color:red;
+            position: absolute;
+            float:right;
+            font-size:3em;
+            line-height: 1;
+            right:0;
+            bottom:-0.5em;
+            content: "\201D";
+        }
+        blockquote footer {
+            padding: 0 2em 0 0;
+            text-align:right;
+        }
+        blockquote cite:before {
+            content: "\2013";
+        }
+
+        h1 {
+            font-size:4.5vh;
+            font-family:'Montserrat';
+            margin:0;
+        }
+
+        h2 {
+            font-size:3.1vh;
+            font-family:'Montserrat';
+            margin:0;
+        }
+
+        h3 {
+            font-size: 2.4vh;
+            font-family:'Montserrat';
+            margin:0;
+        }
+
+        h4 {
+            font-size: 2.5vh;
+            font-family:'Montserrat';
+            margin:0;
+        }
+
+        p {
+            margin:0;
+            padding:0;
+            font-family: 'Montserrat';
+            font-size:2.075vh;
+        }
+
+        a {
+            text-decoration: none;
+            color:black;
+            font-family: 'Montserrat';
+            font-size:2.075vh;
+        }
+
+        html, body {
+            margin:0px;
+            padding:0px;
+            height:100%;
+            overflow-x: hidden;
+        }
+        
+        .header {
+        height:10%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        }
+
+        .logo {
+            width: 10%;
+            z-index:1001;
+            background-color:rgba(255,255,255,0.95)
+        }
+
+        .logo img {
+            height:100%;
+            width:100%;
+        }
+
+        .buttons {
+            width:90%;
+            display:flex;
+            justify-content: space-evenly;
+            background-color:rgba(255,255,255,0.95)
+        }
+
+        .buttons a {
+            width: 30%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buttons a:hover {
+            background-color: rgba(255,0,0,0.75);
+            color:white;
+        }
+
+        .learn-more {
+            width: 20%;
+            height: 10%;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            background-color: #ff3131;
+            right: auto;
+            color:white;
+            font-size: 2vh;
+        }
+
+        .learn-more:hover {
+            background-color: rgb(214, 16, 16);
+        }
+
+        .top {
+            height:60%;
+            margin:0;
+            margin-top:1%;
+            display:flex;
+            color:black;
+            border-radius:12%;
+        }
+
+        .middle {
+            height:60%;
+            width:96%;
+            margin-top:2%;
+            margin-bottom:2%;
+            margin-left:2%;
+            margin-right:2%;
+            display:flex;
+            justify-content: center;
+        }
+
+        .bottom {
+            height:55%;
+            margin:0;
+            display:flex;
+            justify-content: space-around;
+            font-size:1.85vh;
+            background: linear-gradient(to top, rgb(218, 29, 29) 10%, white 20%);
+        }
+
+        .testimonial {
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items:center;
+            position:absolute;
+            bottom:0;
+            padding-bottom:10%;
+        }
+
+        .testimonial img {
+            width:20%;
+            border-radius: 50px;
+            margin:10px;
+        }
+
+        .testimonial h3 {
+            font-family: 'Montserrat';
+            margin:0;
+            font-size:2.125vh;
+        }
+
+        .testimonial p {
+            font-family: 'Montserrat';
+            font-size:1.75vh;
+        }
+
+        .top-right {
+            width:38%;
+            margin-left:1%;
+            margin-right:1%;
+            display:flex;
+            flex-direction: column;
+            box-shadow: 1px 0px 5px red;
+            border-top-right-radius:4%;
+            border-bottom-right-radius:4%;
+        }
+
+        .top-left {
+            width:60%;
+            background-image:url(https://i.imgur.com/eaQ2cLL.png);
+            background-size:100%;
+        }
+
+        .top-right-div {
+            height:50%;
+            width:100%;
+            font-family: 'Montserrat';
+        }
+
+        .top-right-div-header {
+            display:flex;
+            height:30%;
+            width:100%
+        }
+
+        .top-right-div p {
+            font-size: 2vh;
+        }
+
+        .top-right-div-header h4 {
+            font-size: 2.5vh;
+            color:rgb(218, 29, 29);
+        }
+
+        .top-right-div-header img {
+            height:80%;
+            padding-left:3%;
+            padding-top: 1%;
+        }
+
+        .middle-content {
+            width:30%;
+            padding-top:2.5%;
+            padding-left:5%;
+            color:white;
+            background-color:rgb(218, 29, 29);
+            border-top-left-radius: 20%;
+            border-bottom-left-radius: 20%;
+        }
+
+        .middle-pics {
+            width:50%;
+            background: linear-gradient(to right, rgb(218, 29, 29) 50%, white 50%);
+        }
+
+        .middle-pic-1 {
+            width:40%;
+            height:70%;
+            position:relative;
+            top: 10%;
+            right: 20%;
+            float:right;
+            box-shadow: 5px 5px 10px rgb(188, 93, 93);
+        }
+
+        .middle-pic-2 {
+            z-index:100;
+            width: 50%;
+            height:45%;
+            position:relative;
+            top:45%;
+            right:-2%;
+            float:right;
+            box-shadow: 5px 5px 10px rgb(188, 93, 93);
+        }
+        
+        .bubble {
+            z-index:102;
+            width:22%;
+            height:20%;
+            background-color: #ff3131;
+            position:relative;
+            float:right;
+            top:-10%;
+            right:10%;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            color:white;
+        }
+
+        .bubble-tail {
+            background-color: #ff3131;
+            width:3%;
+            height:4.5%;
+            transform: rotate(45deg);
+            z-index: 101;
+            position:relative;
+            float:right;
+            right:-13%;
+            top:0;
+        }
+
+        .middle img {
+            object-fit: cover;
+            width:100%;
+            height:100%;
+        }
+
+        .love {
+            display:flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Montserrat';
+        }
+
+        .bottom-div {
+            width:17.5%;
+            border-radius: 5vh;
+            box-shadow: 0 0 10px rgb(130, 12, 12);
+            padding:0.5%;
+            padding-top:1.25%;
+            position:relative;
+            background-color: white;
+        }
+
+        .bottom-div strong{
+            color:red;
+        }
+
+        .footer {
+            height:17%;
+            padding-top:2%;
+            padding-left:2.5%; 
+            font-family: 'Montserrat';
+            display:flex;
+            background-color:rgb(218, 29, 29);
+            color:white;
+            justify-content: space-evenly;
+        }
+
+        .copy {
+            height:4%;
+            background-color:rgb(218, 29, 29);
+            color:white;
+            display: flex;
+            justify-content: end;
+            align-items: end;
+            padding-right:1%;
+        }
+
+        .footer p {
+            font-size:1.75vh;
+            line-height:3vh;
+        }
+
+        .footer-offer {
+            width:40%;
+        }
+
+        .footer-desc {
+            width:30%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href=""><img src="https://i.imgur.com/XTkTl0g.png" alt="Logo" style="opacity:100%"></a>
+        </div>
+        <div class="buttons">
+            <a href="">Home</a>
+
+            <a href="">Blog</a>
+
+            <a href="">Pricing</a>
+
+            <a href="">Contact Us</a>
+        </div>
+    </div>
+    <div class="top">
+        <div class="top-left">
+            <a href="">
+                <div class="learn-more" style="position:relative;top:65%;left: 40%;">
+                    <p>Learn More</p>
+                </div>
+            </a>
+        </div>
+        <div class="top-right">
+            <div class="top-right-div" style="border-bottom:1px solid red;">
+                <div class="top-right-div-header">
+                    <img src="https://i.imgur.com/RAcz18K.png" alt="Web Development">
+                    <h4 style="margin:2%;">Custom Web Development with Integrated Cybersecurity</h4>
+                </div>
+                <p style="margin-left:2%;margin-right:2%">Our Custom Web Development services are designed to create secure, scalable, and high-performing websites tailored to your specific business needs. We prioritize cybersecurity at every stage of development, ensuring your web applications are not only functional and user-friendly but also fortified against modern threats.</p>
+                <a href=""><div class="learn-more" style="position:relative;float:right;margin-right:3%; height:15%;">
+                    <p>Learn More</p>
+                </div></a>
+            </div>
+            <div class="top-right-div">
+                <div class="top-right-div-header">
+                    <img src="https://i.imgur.com/eIXTYfA.png" alt="Web Development">
+                    <h4 style="margin:2%;">Internal Networking with Enhanced Cybersecurity</h4>
+                </div>
+                <p style="margin-left:2%;margin-right:2%">Our Internal Networking solutions are engineered to create a secure, efficient, and reliable network infrastructure within your organization. We prioritize cybersecurity to protect your internal communications, data, and systems from unauthorized access and cyber threats.</p>
+                <a href=""><div class="learn-more" style="position:relative;top:7%;float:right;margin-right:3%; height:15%;">
+                    <p>Learn More</p>
+                </div></a>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="middle-content">
+            <p><strong>About KurtK0dez</strong></p>
+            <h1 style="margin-top:2%;margin-bottom:2%;">We're Partners of Your Innovation</h1>
+            <div style="width:100%;">
+                <p>
+                    KurtK0dez is a leading IT solutions provider specializing in custom web development and internal networking services. They create secure, scalable websites tailored to business needs, with integrated cybersecurity to protect against modern threats. Additionally, their internal networking solutions ensure efficient, reliable, and secure communication within organizations, safeguarding data and systems from unauthorized access, optimizing overall operational performance, and supporting long-term growth and innovation.</p>
+            </div>
+        </div>
+        <div class="middle-pics">
+            <div class="middle-pic-1">
+                <img src="https://i.imgur.com/HkWnahC.png" alt="Collab 1">
+            </div>
+            <div class="middle-pic-2">
+                <img src="https://i.imgur.com/EKuvTDN.png" alt="Collab 2">
+            </div>
+            <div class="bubble">
+                <h3 style="font-family:'Montserrat';margin:0">5190+ </h3>
+                <p>Satisfied Clients</p>
+            </div>
+            <div class="bubble-tail"></div>
+        </div>
+    </div>
+    <div class="love">
+        <h1 style="margin:0.03%;color:red">Our Impact</h1>
+        <p style="margin-bottom:1%;">Here's what our clients say:</p>
+    </div>
+    <div class="bottom">
+        <div class="bottom-div">
+            <blockquote>
+                KurtK0dez transformed our online store's backend, making it <strong>faster</strong> and <strong>more secure</strong>. Their solutions have <strong>significantly reduced downtime</strong>, leading to a <strong>smoother shopping experience</strong> for our customers. We couldn't be happier with their service!
+            </blockquote>
+            <div class="testimonial">
+                <img src="https://i.imgur.com/tUJCIRx.png" alt="Jane D.">
+                <h3><strong>Jane Davis</strong></h3>
+                <p>CEO, ShopEase</p>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <blockquote>
+                As a healthcare provider, <strong>data security is our top priority</strong>. KurtK0dez implemented <strong>robust cybersecurity measures</strong> that give us peace of mind. Their expertise is unmatched, and their support is always reliable.
+            </blockquote>
+            <div class="testimonial">
+                <img src="https://i.imgur.com/JAAUiXP.png" alt="Mark R.">
+                <h3><strong>Dr. Mark Roberts</strong></h3>
+                <p>Director, HealthSecure Clinics</p>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <blockquote>
+                KurtK0dez helped us migrate to the cloud seamlessly, ensuring our data remains <strong>secure and accessible</strong>. Their team is professional, efficient, and truly understands the unique needs of the financial industry.
+            </blockquote>
+            <div class="testimonial">
+                <img src="https://i.imgur.com/aOkDUT6.jpeg" alt="Laura Baker">
+                <h3><strong>Laura Baker</strong></h3>
+                <p>CFO, FinTrust Advisors</p>
+            </div>
+        </div>
+        <div class="bottom-div">
+            <blockquote>
+                We needed a customized IT solution to streamline our production processes. KurtK0dez delivered beyond our expectations, <strong>improving our operational efficiency</strong> and <strong>reducing costs</strong>. They’re a game-changer for our business!
+            </blockquote>
+            <div class="testimonial">
+                <img src="https://i.imgur.com/oqlXpmJ.jpeg" alt="Mike T.">
+                <h3><strong>Mike Thompson</strong></h3>
+                <p>COO, Thompson Manufacturing</p>
+            </div>
+        </div>
+
+        <div class="bottom-div">
+            <blockquote>
+                KurtK0dez set up our IT infrastructure, allowing our team to <strong>collaborate effortlessly</strong>, even remotely. Their innovative solutions have enabled us to focus on creativity while they handle the tech. Highly recommend!
+            </blockquote>
+            <div class="testimonial">
+                <img src="https://i.imgur.com/LxjHiDY.jpeg" alt="Sarah P.">
+                <h3><strong>Sarah Peters</strong></h3>
+                <p>Founder, CreativePulse Agency</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-offer">
+            <p style="margin-bottom:3%;font-size:1.75vh">What We're Offering</p>
+            <h1>Dealing in All Professional IT Services</h1>
+        </div>
+        <div class="footer-desc">
+            <p>We offer full-cycle software development services that meet varied business requirements from IT strategy consulting to the end-to-end development of scalable solutions.</p>
+        </div>
+    </div>
+    <div class="copy">
+        <p>&copy; 2024 KurtK0dez.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+* {
+margin:0;
+}
+
+body {
+  background-color: #444444;
+}
+
+img {
+  border-radius:50%;
+  float: left;
+}
+
+h3 {
+text-indent:4em;
+padding-left:50px;
+padding-right:50px;
+}
+
+.top {
+  background-color:#000000;
+  opacity:0.8;
+  position:sticky;
+  overflow-x:hidden;
+  top:0px;
+  width:60%;
+  height:40px;
+  padding-top:10px;
+  padding-left:40%;
+  color: white;
+  text-align:center;
+  font-size: 30px;
+}
+
+.josefin-sans-all {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+
+.body-content {
+  background-color:#292929;
+  margin: 10px;
+  padding: 20px;
+  padding-bottom: 10px;
+  height: 322px;
+  width: 60%;
+  float:left;
+  border-radius:12px;
+}
+
+.student-profile {
+  margin-top:60px;
+  margin-left: 300px;
+  padding-bottom: 10px;
+  width:450px;
+  border-bottom:2px solid #DDDDDD;
+}
+
+.button {
+  margin:10px;
+  border:0.5px solid #DDDDDD;
+}
+
+.posts {
+  border-radius:12px;
+  background-color:#292929;
+  margin: 10px;
+  padding: 20px;
+  padding-bottom: 10px;
+  height:550px;
+

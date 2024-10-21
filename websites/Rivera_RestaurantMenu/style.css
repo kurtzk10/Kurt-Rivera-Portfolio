@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+BE+WAL:wght@100..400&display=swap');
+
+
+body {
+    background-color: #D9D4CC;
+    font-family: "Josefin Sans", sans-serif;
+    margin:0px;
+}
+
+.header {
+    background-color: #A6886D;
+    padding-left:25px;
+    height:60px;
+    color:#401E0A;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: justify;
+    top:0;
+    position:sticky;
+}
+
+.buttons {
+    height:60px;
+    display:flex;
+}
+
+.buttons p {
+    padding-left:25px;
+    padding-right:25px;
+}
+
+.header h1 {
+    margin:0;
+    margin-right:810px;
+}
+
+.header a {
+    text-decoration:none;
+    color: #401E0A;
+}
+
+.header a:hover {
+    background-color: #401E0A;
+    color:#D9D4CC;
+}
+
+.banner, .showcase {
+    margin-top:20px;
+    margin-right:50px;
+    margin-left:50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner img {
+    width: 1305px;
+    height:300px;
+    object-fit:cover;
+    object-position: 90% 17%;
+}
+
+.showcase img {
+    width:300px;
+    height:300px;
+    object-fit: cover;
+}
+
+.showcase h4 {
+    text-align: center;
+}
+
+img {
+    box-shadow: 10px 10px 2px #401E0A;
+}

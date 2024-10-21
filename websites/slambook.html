@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:16px;font-family: 'Caveat';">
+<head>
+    <meta charset="UTF-8">
+    <title>Kurt's Slambook</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <style>
+        h1 {
+            font-size: 2vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        h2 {
+            font-size: 1.83vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        h3 {
+            font-size: 1.17vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        h4 {
+            font-size: 1vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        h5 {
+            font-size: 0.83vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        h6 {
+            font-size: 0.67vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        p {
+            font-size: 1vw;
+            margin:0;
+            padding:0;
+            cursor: default;
+        }
+
+        body {
+            --motif: rgb(167,107,80);
+            background-color: burlywood;
+            margin:0;
+            padding:0;
+            height: 300vh;
+        }
+
+        .header {
+            margin:0;
+            padding: 0;
+            width:100%;
+            height: 7.5vh;
+            background-color: rgba(167,107,80,0.85);
+            display: flex;
+            top: 0;
+            position:sticky;
+            justify-content: center;
+            align-items: center;
+            z-index:10;
+            color: white;
+        }
+        
+        .top {
+            display:flex;
+            justify-content: center;
+            height:26vw;
+        }
+
+        .name {
+            width: 60vw;
+            height: 26vh;
+            background-color: white;
+            border-radius: 12px;
+            border: 20px solid #cab19b;
+            display:flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            position:relative;
+            transform: rotate(-1deg);
+            top:30%;
+        }
+
+        .personal {
+            height: 60vh;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 5vh;
+            margin-bottom: 10vh;
+        }
+
+        .personal-right {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .radio {
+            display:flex;
+            justify-content: space-evenly;
+            margin-top: 6vh;
+            position:relative;
+        }
+
+        .drop-down {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 6vh;
+        }
+
+        .tape {
+            /*background-image: url(https://i.imgur.com/TQSmR45.png);*/
+            background-color: rgba(203, 175, 136, 0.75);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 15vw;
+            height: 6.2vh;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+            color:rgb(255, 255, 255);
+            margin-bottom:1%;
+            position:absolute;
+            top: -15%;
+        }
+
+        .name-input {
+            position: absolute;
+            top:20%;
+        }
+
+        .picture {
+            width: 11vw;
+            margin-left: 5vw;
+            margin-top:5vh;
+            margin-right: 10vw;
+            transform: rotate(10deg);
+        }
+
+        .picture img {
+            border: 10px solid white;
+            width: 150%;
+        }
+
+        .personal-content {
+            background-color: white;
+            border-radius: 12px;
+            border: 20px solid #1f4e45;
+            width: 30vw;
+            height: 35vh;
+            margin: 5%;
+            position:relative;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .bday {
+            background-color: white;
+            border-radius: 12px;
+            border: 20px solid #1f4e45;
+            width: 30vw;
+            height: 25vh;
+            margin: 5%;
+            position:relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .motto {
+            background-color: white;
+            border-radius: 12px;
+            border: 20px solid #1f4e45;
+            width: 30vw;
+            height: 20vh;
+            margin: 5%;
+            position:relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hobby {
+            width: 80vw;
+            height: 36.8vh;
+            background-color: white;
+            margin-left: 8vw;
+            margin-top: 6vh;
+            border-radius: 12px;
+            border: 20px solid #a76b50;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position:relative;
+            transform: rotate(0.5deg);
+        }
+
+        .radio-content {
+            width: 35vw;
+            height: 37vw;
+            background-color: white;
+            border-radius: 12px;
+            border: 20px solid #bc563b;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: auto;
+        }
+
+        .drop-down-content {
+            width: 35vw;
+            height: 10vw;
+            background-color:white;
+            border-radius: 12px;
+            border: 20px solid #4a756e;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+        }
+
+        .music {
+            width: 80vw;
+            height: 40vh;
+            background-color: white;
+            margin-left: 8vw;
+            margin-top: 6vh;
+            margin-bottom: 4vh;
+            border-radius: 12px;
+            border: 20px solid #a76b50;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            position:relative;
+            transform: rotate(0.5deg);
+        }
+        
+        .submit {
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .odd {
+            background-color: #ddd2c8;
+            width: 100%;
+        }
+
+        .even {
+            background-color: white;
+            width: 100%;
+        }
+
+        .name-input td{
+            padding-left: 10%;
+        }
+
+        .hobby td {
+            padding-left: 5%;
+        }
+
+        .radio-content td {
+            padding-left: 5%;
+        }
+
+        .music td {
+            padding-left: 5%;
+        }
+
+        .personal-content td {
+            padding-left: 5%;
+        }
+
+        .personal-content input[type='text'] {
+            width: 12em;
+        }
+
+        table {
+            width: 100%;
+            padding:0;
+            margin:0;
+            border-collapse: collapse;
+        }
+
+        label {
+            font-size:2vw;
+        }
+
+        input[type='text'] {
+            font-size: 1.75vw;
+            width: calc(100% - 12em);
+            font-family: 'Caveat';
+            border: 0px;
+            border-bottom: 2px dotted black;
+            background-color: rgba(0,0,0,0);
+        }
+
+        input[type='date'] {
+            font-size: 3vw;
+            font-family: 'Caveat';
+            border: 0;
+            border-radius: 12px;
+            background-color: #1f4e45;
+            color-scheme: dark;
+            cursor: pointer;
+        }
+
+        input[type='checkbox'] {
+            height: 3.72vh;
+            width: 2vw;
+            accent-color: #a76b50;
+            cursor: pointer;
+        }
+
+        input[type='radio'] {
+            height: 3.72vh;
+            width: 1.86vw;
+            accent-color: #bc563b;
+            cursor: pointer;
+        }
+
+        select {
+            width: 12vw;
+            height: 5vh;
+            border: 0;
+            font-size: 2vw;
+            font-family: 'Caveat';
+            cursor:pointer;
+        }
+
+        button {
+            display:flex;
+            justify-content: center;
+            margin-right: 5%;
+            margin-left: 5%;
+            width: 10%;
+            height: 70%;
+            margin-top: 1vh;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+            border: 0;
+            background-color:white;
+            border-radius: 12px;
+            font-family: 'Caveat';
+            font-size: 2vw;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color:var(--motif);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="font-size:3vw">Kurt's Slambook</h1>
+    </div>
+    <form>
+        <div class="top">
+            <div class="name">
+                <div class="tape">
+                    <h1>your name !!</h1>
+                </div>
+                <table class="name-input">
+                    <tr class="odd">
+                        <td>
+                            <label for="name">Full Name: </label>
+                            <input type="text" id="name" name="name">
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>
+                            <label for="nickname">Nickame: </label>
+                            <input type="text" id="nickname" name="nickname">
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>
+                            <label for="supername">Super Hero Name: </label>
+                            <input type="text" id="supername" name="supername">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="picture">
+                <img src="https://i.imgur.com/AqWwNHg.png" alt="Your Picture Here">
+            </div>
+        </div>
+
+        <div class="personal">
+            <div class="personal-content" style="transform: rotate(1deg)">
+                <div class="tape">
+                    <h1>describe urself</h1>
+                </div>
+                <table>
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="extrovert" name="personality" value="Extrovert">
+                            <label for="extrovert">Extrovert 📣</label>
+                        </td>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="introvert" name="personality" value="Introvert">
+                            <label for="introvert">Introvert 🐺</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="ambivert" name="personality" value="Ambivert">
+                            <label for="ambivert">Ambivert ☯</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td style="display:flex; justify-content: center; flex-wrap:wrap; padding-left:0;">
+                            <label for="describe">describe yourself in 1 sentence:</label>
+                            <input type="text" id="describe" name="describe">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="personal-right">
+                <div class="bday" style="transform: rotate(-1.7deg)">
+                    <div class="tape">
+                        <h1>your bday</h1>
+                    </div>
+                    <h1 style="margin-top:1.5vh;">when is ur birthday?</h1>
+                    <input type="date" id="bday" name="bday">
+                </div>
+
+                <div class="motto">
+                    <div class="tape">
+                        <h1>motto in life</h1>
+                    </div>
+                    <h1 style="margin-top:5%">your motto in life is:</h1>
+                    <input type="text" id="motto" name="motto" style="width: 80%;margin-bottom:5%;">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hobby">
+            <div class="tape" style="justify-content:space-evenly;">
+                <h1>☆hobbies ☆</h1>
+            </div>
+            <h1>what are your hobbies? are they the same as mine???</h1>
+            <table>
+                <tr>
+                    <td class="odd">
+                        <input type="checkbox" id="reading" name="hobby" value="Reading">
+                        <label for="reading">Reading 📚</label>
+                    </td>
+                </tr>
+
+                <tr class="even">
+                    <td>
+                        <input type="checkbox" id="video-games" name="hobby" value="Playing Video Games">
+                        <label for="video-games">Playing Video Games 🎮</label>
+                    </td>
+                </tr>
+                
+                <tr class="odd">
+                    <td>
+                        <input type="checkbox" id="listen-music" name="hobby" value="Listening to Music">
+                        <label for="listen-music">Listening to Music 🎶</label>
+                    </td>
+                </tr>
+
+                <tr class="even">
+                    <td>
+                        <input type="checkbox" id="photography" name="hobby" value="Photography">
+                        <label for="photography">Photography 📸</label>
+                    </td>
+                </tr>
+
+                <tr class="odd">
+                    <td>
+                        <input type="checkbox" id="cooking" name="hobby" value="Cooking">
+                        <label for="cooking">Cooking 🍳</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="radio">
+            <div class="tape" style="top:-2%;left:20%;z-index:1;">
+                <h1>fave movie genre</h1>
+            </div>
+        
+            <div class="radio-content">
+                <table style="margin-top:7.5%">
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="action" name="movie-genre" value="Action">
+                            <label for="action">Action 💥</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="comedy" name="movie-genre" value="Comedy">
+                            <label for="comedy">Comedy 😂</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="drama" name="movie-genre" value="Drama">
+                            <label for="drama">Drama 😭</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="thriller" name="movie-genre" value="Thriller">
+                            <label for="thriller">Thriller 😲</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="horror" name="movie-genre" value="Horror">
+                            <label for="horror">Horror 😱</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="romance" name="movie-genre" value="Romance">
+                            <label for="romance">Romance 🌹</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="sci-fi" name="movie-genre" value="Sci-Fi">
+                            <label for="sci-fi">Science Fiction 👽</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="fantasy" name="movie-genre" value="Fantasy">
+                            <label for="fantasy">Fantasy 🧙‍♂️</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="documentary" name="movie-genre" value="Documentary">
+                            <label for="documentary">Documentary 📹</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="tape" style="top:-2%;left:65%;z-index:1;">
+                <h1>fave animal? 🦁</h1>
+            </div>
+
+            <div class="radio-content">
+                <table style="margin-top:7.5%;">
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="dog" name="animal" value="Dog">
+                            <label for="dog">Dog 🐶</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="chicken" name="animal" value="Chicken">
+                            <label for="chicken">Chicken 🐔</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="horse" name="animal" value="Horse">
+                            <label for="horse">Horse 🐴</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="fish" name="animal" value="Fish">
+                            <label for="fish">Fish 🐠</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="bear" name="animal" value="Bear">
+                            <label for="bear">Bear 🐻</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="bird" name="animal" value="Bird">
+                            <label for="bird">Bird 🐦</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="shark" name="animal" value="Shark">
+                            <label for="shark">Shark 🦈</label>
+                        </td>
+                    </tr>
+
+                    <tr class="even">
+                        <td>
+                            <input type="radio" id="lion" name="animal" value="Lion">
+                            <label for="lion">Lion 🦁</label>
+                        </td>
+                    </tr>
+
+                    <tr class="odd">
+                        <td>
+                            <input type="radio" id="monkey" name="animal" value="Monkey">
+                            <label for="monkey">Monkey 🐵</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="drop-down">
+            <div class="drop-down-content" style="transform: rotate(-0.6deg)">
+                <div class="tape" style="top:-18%;">
+                    <h1>fave color !</h1>
+                </div>
+                <label for="color" style="margin-right:5%;">what is your favorite color?</label>
+                <select id="color" name="color">
+                    <option value="red">Red 🟥</option>
+                    <option value="blue">Blue 🟦</option>
+                    <option value="green">Green 🟩</option>
+                    <option value="yellow">Yellow 🟨</option>
+                    <option value="purple">Purple 🟪</option>
+                    <option value="black">Black ⬛</option>
+                    <option value="white">White ⬜</option>
+                </select>
+            </div>
+
+            <div class="drop-down-content" style="transform: rotate(1.7deg)">
+                <div class="tape" style="top:-18%;">
+                    <h1>zodiac sign !</h1>
+                </div>
+                <label for="zodiac" style="margin-right:5%;">what is your zodiac sign?</label>
+                <select id="zodiac" name="zodiac">
+                    <option value="aries">Aries ♈</option>
+                    <option value="taurus">Taurus ♉</option>
+                    <option value="gemini">Gemini ♊</option>
+                    <option value="cancer">Cancer ♋</option>
+                    <option value="leo">Leo ♌</option>
+                    <option value="virgo">Virgo ♍</option>
+                    <option value="libra">Libra ♎</option>
+                    <option value="scorpio">Scorpio ♏</option>
+                    <option value="sagittarius">Sagittarius ♐</option>
+                    <option value="capricorn">Capricorn ♑</option>
+                    <option value="aquarius">Aquarius ♒</option>
+                    <option value="pisces">Pisces ♓</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="music" style="transform: rotate(-0.7deg)">
+            <div class="tape" style = "top:-10%;">
+                <h1>music 🎶</h1>
+            </div>
+            <h1 style="margin-top:1%;">what kind of music do you enjoy??</h1>
+            <table>
+                <tr class="odd">
+                    <td>
+                        <input type="checkbox" id="pop" name="music" value="Pop">
+                        <label for="pop">Pop 🎙</label>
+                    </td>
+                </tr>
+
+                <tr class="even">
+                    <td>
+                        <input type="checkbox" id="rock" name="music" value="Rock">
+                        <label for="rock">Rock 🤘</label>
+                    </td>
+                </tr>
+
+                <tr class="odd">
+                    <td>
+                        <input type="checkbox" id="jazz" name="music" value="Jazz">
+                        <label for="jazz">Jazz 🎷</label>
+                    </td>
+                </tr>
+
+                <tr class="even">
+                    <td>
+                        <input type="checkbox" id="classical" name="music" value="Classical">
+                        <label for="classical">Classical 🎻</label>
+                    </td>
+                </tr>
+
+                <tr class="odd">
+                    <td>
+                        <input type="checkbox" id="hiphop" name="music" value="Hip-Hop">
+                        <label for="hiphop">Hip-Hop 🎤</label>
+                    </td>
+                </tr>
+
+                <tr class="even">
+                    <td>
+                        <label for="song">favorite song of all time: </label>
+                        <input type="text" id="song" name="song">
+                    </td>
+            </table>
+        </div>
+
+        <div class="submit">
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

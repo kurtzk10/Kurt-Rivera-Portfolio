@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places I Want to Visit</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 1vh;
+        }
+
+        header h1 {
+            text-align:center;
+            font-family: "Open Sans";
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #e0e0e0;
+            overflow:hidden;
+        }
+
+        #main-content {
+            width: 98%;
+            height: 80vh;
+            margin: 1%;
+            padding: 5%;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            position: relative;
+            margin-bottom: 0.5%;
+        }
+
+        #image-container {
+            width: 100%;
+            height: 80%;
+            display:flex;
+            align-items: center;
+        }
+
+        #content {
+            padding: 1%;
+            width: 48%;
+            height: 60%;
+            display:flex;
+            position: relative;
+            align-items: center;
+        }
+
+        #content h1 {
+            position:absolute;
+            top: 0%;
+        }
+
+        #image-container img {
+            width: 48%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            position: absolute;
+            top: 90%;
+            left: 45.5%;
+        }
+
+        button {
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border: 0;
+        }
+
+        button:hover {
+            background-color: #8b8b8b;
+            cursor:pointer;
+        }
+
+        #b-1 {
+            background-color: #8b8b8b;
+        }
+
+        footer {
+            display:flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="">Places I'd like to visit</h1>
+    </header>
+    <main id="main-content">
+        <div id="image-container">
+            <div id="content">
+                <h1 id="header">Ha Long Bay, Vietnam</h1>
+                <p id="desc">is a UNESCO World Heritage Site and popular travel destination in Quảng Ninh province, Vietnam. The name Hạ Long means 'descending dragon'. Administratively, the bay belongs to Hạ Long city, Cẩm Phả city, and is a part of Vân Đồn district. The bay features thousands of limestone karsts and islets in various shapes and sizes. Hạ Long Bay is a center of a larger zone that includes Bai Tu Long Bay to the northeast, and Cát Bà Island to the southwest. These larger zones share a similar geological, geographical, geomorphological, climate, and cultural characters.</p>
+            </div>
+            <img id="image" src="https://wallpapers.com/images/featured/halong-bay-k8oq8wowpx9tgwtz.jpg">
+        </div>
+        <div class="buttons">
+            <button id="b-1" onclick="img1()"></button>
+            <button id="b-2" onclick="img2()"></button>
+            <button id="b-3" onclick="img3()"></button>
+            <button id="b-4" onclick="img4()"></button>
+            <button id="b-5" onclick="img5()"></button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Copyright 2024. Kurt Francis A. Rivera</p>
+    </footer>
+</body>
+
+<script>
+    function img1() {
+        document.getElementById("image").src = "https://wallpapers.com/images/featured/halong-bay-k8oq8wowpx9tgwtz.jpg";
+        document.getElementById("header").innerHTML = "Ha Long Bay, Vietnam";
+        document.getElementById("desc").innerHTML = "is a UNESCO World Heritage Site and popular travel destination in Quảng Ninh province, Vietnam. The name Hạ Long means 'descending dragon'. Administratively, the bay belongs to Hạ Long city, Cẩm Phả city, and is a part of Vân Đồn district. The bay features thousands of limestone karsts and islets in various shapes and sizes. Hạ Long Bay is a center of a larger zone that includes Bai Tu Long Bay to the northeast, and Cát Bà Island to the southwest. These larger zones share a similar geological, geographical, geomorphological, climate, and cultural characters.";
+        document.getElementById("b-1").style.backgroundColor = "#8b8b8b";
+        document.getElementById("b-2").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-3").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-4").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-5").style.backgroundColor = "#e0e0e0";
+    }
+
+    function img2() {
+        document.getElementById("image").src = "https://i.imgur.com/nMSgP1v.jpeg";
+        document.getElementById("header").innerHTML = "Mount Fuji, Japan";
+        document.getElementById("desc").innerHTML = "is an active stratovolcano located on the Japanese island of Honshu, with a summit elevation of 3,776.24 m (12,389 ft 3 in). It is the tallest mountain in Japan, the second-highest volcano located on an island in Asia. Mount Fuji is one of Japan's 'Three Holy Mountains' (三霊山, Sanreizan) along with Mount Tate and Mount Haku. It is a Special Place of Scenic Beauty and one of Japan's Historic Sites.[7] It was added to the World Heritage List as a Cultural Site on June 22, 2013."
+        document.getElementById("b-2").style.backgroundColor = "#8b8b8b";
+        document.getElementById("b-1").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-3").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-4").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-5").style.backgroundColor = "#e0e0e0";
+    }
+
+    function img3() {
+        document.getElementById("image").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/1200px-New_york_times_square-terabass.jpg";
+        document.getElementById("header").innerHTML = "New York City, United States";
+        document.getElementById("desc").innerHTML = "New York, often called New York City or NYC, is the most populous city in the United States. Located at the southern tip of New York State on one of the world's largest natural harbors, the city comprises five boroughs, each coextensive with a respective county. New York is a global center of finance and commerce, culture, technology, entertainment and media, academics and scientific output, the arts and fashion, and, as home to the headquarters of the United Nations, international diplomacy.";
+        document.getElementById("b-3").style.backgroundColor = "#8b8b8b";
+        document.getElementById("b-2").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-1").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-4").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-5").style.backgroundColor = "#e0e0e0";
+    }
+
+    function img4() {
+        document.getElementById("image").src = "https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg";
+        document.getElementById("header").innerHTML = "The Colosseum, Rome, Italy";
+        document.getElementById("desc").innerHTML = "is a giant amphitheater built in Rome under the Flavian emperors. Construction of the Colosseum was begun sometime between 70 and 72 ce during the reign of Vespasian. It is located just east of the Palatine Hill, on the grounds of what was Nero’s Golden House. The artificial lake that was the centerpiece of that palace complex was drained, and the Colosseum was sited there, a decision that was as much symbolic as it was practical. Vespasian, whose path to the throne had relatively humble beginnings, chose to replace the tyrannical emperor’s private lake with a public amphitheater that could host tens of thousands of Romans.";
+        document.getElementById("b-4").style.backgroundColor = "#8b8b8b";
+        document.getElementById("b-2").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-3").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-1").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-5").style.backgroundColor = "#e0e0e0";
+    }
+
+    function img5() {
+        document.getElementById("image").src = "https://i.natgeofe.com/n/535f3cba-f8bb-4df2-b0c5-aaca16e9ff31/giza-plateau-pyramids_16x9.jpg?w=1200";
+        document.getElementById("header").innerHTML = "Pyramids of Giza, Egypt";
+        document.getElementById("desc").innerHTML = "The Giza pyramid complex (also called the Giza necropolis) in Egypt is home to the Great Pyramid, the Pyramid of Khafre, and the Pyramid of Menkaure, along with their associated pyramid complexes and the Great Sphinx. All were built during the Fourth Dynasty of the Old Kingdom of ancient Egypt, between c. 2600 – c. 2500 BC. The site also includes several temples, cemeteries, and the remains of a workers' village.";
+        document.getElementById("b-5").style.backgroundColor = "#8b8b8b";
+        document.getElementById("b-2").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-3").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-4").style.backgroundColor = "#e0e0e0";
+        document.getElementById("b-1").style.backgroundColor = "#e0e0e0";
+    }
+
+</script>
+
+</html>

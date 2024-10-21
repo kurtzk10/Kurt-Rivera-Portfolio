@@ -1,0 +1,301 @@
+* {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+:root {
+    --background-color: white;
+    --color: black;
+}
+
+html {
+    font-size: 32px;
+    font-family: 'Inria Serif', 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+}
+
+i {
+    font-size: 0.65rem;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: bold;
+    user-select: none;
+    color: var(--background-color);
+}
+
+h2 {
+    font-size: 0.75rem;
+}
+
+h3 {
+    font-size: 0.65rem;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+}
+
+.footer h3 {
+    font-size: 0.65rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.landing {
+    width: 100%;
+    height: 100vh;   
+}
+
+header {
+    z-index: 1;
+    padding: 2%;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    height: 15%;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    background-color: var(--background-color);
+}
+
+header h1 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: var(--color);
+    text-decoration: none;
+}
+
+.nav {
+    display:flex;
+    width: 40%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.switch {
+    width: 60px;
+    height: 27.5px;
+    border: 1px solid var(--color);
+    box-sizing: border-box;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#circle {
+    position: absolute;
+    left: 10%;
+    border-radius: 100%;
+    width: 28.5%;
+    height: 60%;
+    box-sizing: border-box;
+    border: 1px solid var(--color);
+    transition: transform 0.5s ease-in-out;
+}
+
+.switch:hover {
+    cursor: pointer;
+}
+
+.circleMove {
+    transform: translateX(30px);
+}
+
+.unmoved {
+    transform: translateX(0px);
+}
+
+#selected {
+    height: 2px;
+    width: 2.80rem;
+    background-color: var(--color);
+    position: absolute;
+    bottom: 30%;
+    right: 24.75%;
+}
+
+.row {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.main {
+    width: 100%;
+    height: 85%;
+}
+
+.window {
+    width: 45%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 90%;
+    box-shadow: 5px 5px 5px 0px grey;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+}
+
+.image img:hover {
+    opacity:  0.5;
+    z-index: -1;
+}
+
+.title {
+    width: 100%;
+    height: 10%;
+    display:flex;
+    align-items: end;
+    justify-content: center
+}
+
+.solo {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    align-items: end;
+    height: 5%;
+}
+
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 25px;
+    }
+
+    header {
+        height: 10%;
+        
+    }
+
+    .nav {
+        width: 40%;
+    }
+
+    .switch {
+        width: 50px;
+        height:  25px;
+    }
+
+    .circleMove {
+        transform: translateX(25px);
+    }
+
+    #selected {
+        right: 23.5%;
+    }
+
+    .row {
+        height: 40%;
+        margin-bottom: 10%;
+    }
+
+    .title {
+        margin-top: 2.5%;
+    }
+
+    .title h1 {
+        font-size: 20px;
+    }
+
+    .solo {
+        height: 40%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        width: 100%;
+    }
+
+    html {
+        font-size: 20px;
+    }
+
+    header {
+        height: 10%;
+    }
+
+    i {
+        display: none;
+    }
+
+    .nav {
+        width: 60%;
+        height: 37.5%;
+        align-items: end;
+    }
+
+    .switch {
+        width: 30px;
+        height: 15px;
+    }
+
+    #selected {
+        right: 46.5%;
+    }    
+
+    .circleMove {
+        transform: translateX(14px);
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 2.5%;
+        height: 90%;
+        margin-bottom: 8%;
+    }
+
+    .window {
+        width: 90%;
+    }
+
+    .title {
+        height: 10%;
+    }
+
+    .footer {
+        height: 7.5%;
+    }
+}

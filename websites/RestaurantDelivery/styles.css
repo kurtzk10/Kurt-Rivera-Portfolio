@@ -1,0 +1,286 @@
+*:not(.socials) {
+    font-family: 'Poppins', Arial;
+}
+
+header {
+    background-color: hsl(351, 55%, 40%);
+    padding: 2.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials {
+    display:flex;
+    font-size: 30px;
+    width: 10%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+a {
+    color: unset;
+    padding: 0;
+    margin: 0;
+}
+
+i.fa {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+    font-weight: 900; /* This might be necessary for solid icons */
+    margin: 0;
+}
+
+.gold {
+    color: hsl(51, 100%, 50%);
+    text-shadow:3px 5px hsl(351, 75%, 32%);
+}
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(to bottom,
+    hsl(351, 75%, 32%) 0%,
+    transparent 20%)
+}
+
+.title {
+    font-family: 'Playfair Display';
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+    background-color: hsl(351, 51%, 49%);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    padding: 2.5% 2.5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.catalog {
+    width: 65%;
+    height: 80%;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.right {
+    width: 25%;
+    height: 94.5vh;
+    box-sizing: border-box;
+    border: 1px solid hsl(351, 75%, 32%);
+    box-shadow: hsl(351, 75%, 32%) 5px 5px 2px;
+    border-radius: 12px;
+    top: 0;
+    background-color: #9D2D3E;
+    padding: 1%;
+    color: white;
+    position: relative;
+}
+
+.menu {
+    width: 100%;
+    height: 60%;
+}
+
+.menu:last-of-type {
+    margin-top: 2.5%;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    height: 100%;
+}
+
+.item {
+    width: 22.5%;
+    height: 40vh;
+    box-shadow: hsl(351, 75%, 32%) 5px 5px  2px;
+    border: 1px solid hsl(351, 75%, 32%);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #9D2D3E;
+    color: hsl(51, 100%, 50%);
+}
+
+.item img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid hsl(351, 75%, 32%);
+}
+
+.item-desc {
+    height: 50%;
+    width: 100%;
+    padding: 10% 5%;   
+    position: relative;
+}
+
+.price {
+    color: hsl(51, 88%, 72%);
+    font-weight: bold;
+    margin: 2.5% 0;
+    padding: 0;
+}
+
+.add {
+    position:absolute;
+    padding: 4%;
+    top: 50%;
+}
+
+#cart {
+    background-color:hsl(351, 75%, 32%);
+    margin: 5% 0;
+    width: 100%;
+    text-align: center;
+    max-height: 27vh;
+    overflow: auto;
+    scrollbar-gutter: stable;
+}
+
+ul {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    background-color: hsl(351, 75%, 32%)
+}
+
+li {
+    display: flex;
+    gap: 1%;
+    margin: 5% 0;
+    border-bottom: 1px solid white;
+}
+
+li p {
+    margin: 1%;
+    padding: 0 1%;
+}
+
+.total {
+    padding: 0 1%;
+    display: flex;
+    width: 97.5%;
+    justify-content: space-between;
+    overflow:auto;
+    scrollbar-gutter: stable;
+}
+
+strong {
+    padding: 0;
+}
+
+
+form {
+    position:absolute;
+    width: 100%;
+    height: 55%;
+    margin-left: -4.5%;
+    box-sizing: border-box;
+    bottom: 0;
+    border-top: 1px solid hsl(351, 75%, 32%);
+    padding: 5%;
+}
+
+input[type="text"] {
+    display: block;
+    font-size: 1.15rem;
+    width: 98%;
+    height: 10%;
+    box-sizing: border-box;
+    margin-bottom: 1%;
+    padding: 5px;
+    border: none;
+    background-color: hsl(351, 75%, 32%);
+    color: white;
+}
+
+input[type="text"]:focus {
+    display: block;
+    font-size: 1.15rem;
+    width: 98%;
+    border-style: none;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+button {
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    background-color:hsl(51, 100%, 50%);
+    color: hsl(351, 75%, 32%);
+    box-shadow: hsl(351, 75%, 32%) 5px 5px 5px;
+}
+
+button:hover {
+    background-color:hsl(51, 72%, 47%);
+}
+
+label {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    vertical-align: center;
+}
+
+.head {
+    display: block;
+}
+
+.address {
+    margin-top: 10%;
+}
+
+input[type="radio"] {
+    background-color:hsl(351, 75%, 32%);
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 10% auto;
+    padding: 2.5%;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+    background-color:hsl(51, 100%, 50%);
+}
+
+input[type="submit"]:hover {
+    background-color:hsl(51, 72%, 47%);
+}
